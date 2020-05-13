@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: danjohnsondockerdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: danjohnsondockerdemo 
+    spec:
+      containers:
+        - name: danjohnsondockerdemo 
+          image: danjohnson.azurecr.io/danjohnsondockerdemo
+          ports:
+          - containerPort: 3000
