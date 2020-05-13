@@ -52,5 +52,5 @@ stages:
         deployToSlotOrASE: true
         resourceGroupName: 'docker-demo'
         slotName: 'production'
-        containers: '$(imageRepository)'
+        containers: '$(imageRepository):$(tag)'
         containerCommand: 'npm start'
