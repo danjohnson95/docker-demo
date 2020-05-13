@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "danjohnson"
+    labels:
+        app: "danjohnson"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: danjohnson817c-danjohnson.c66db70de3a04aad954d.uksouth.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "danjohnson"
+                servicePort: 3000
