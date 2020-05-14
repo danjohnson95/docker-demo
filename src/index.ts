@@ -1,10 +1,12 @@
 import express from 'express';
 
-const helloWorld = 'hello world';
 const app = express();
 
 app.get('/', (req, res) => {
   res.send('Hello Access!');
 });
+
+console.log('hello');
+console.log('hello');
 
 app.listen(80);
