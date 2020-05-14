@@ -12,9 +12,5 @@ COPY . .
 # which was copied in on the previous step.
 RUN npm ci
 
-# Run an npm test. It'll go through the linting rules and fail
-# to build if the code doesn't meet our standards.
-RUN npm test
-
 # Compile the Typescript.
 RUN npm run build
